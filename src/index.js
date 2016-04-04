@@ -16,444 +16,504 @@
 'use strict';
 
 /**
+ * Add in our President data
+*/
+var President = function (fname, mname, lname) {
+  this.firstName = fname;
+  this.middleName = mname;
+  this.lastName = lname;
+  this.fullName = this.firstName + " " + this.middleName + " " + this.lastName;
+  
+};
+
+var potusArray = [];
+
+potusArray.push(new President("George","","Washington"));
+potusArray.push(new President("John","","Adams"));
+potusArray.push(new President("Thomas","","Jefferson"));
+potusArray.push(new President("James","","Madison"));
+potusArray.push(new President("James","","Monroe"));
+potusArray.push(new President("John","Quincy","Adams"));
+potusArray.push(new President("Andrew","","Jackson"));
+potusArray.push(new President("Martin","","Van Buren"));
+potusArray.push(new President("William","Henry","Harrison"));
+potusArray.push(new President("John","","Tyler"));
+potusArray.push(new President("James","Knox","Polk"));
+potusArray.push(new President("Zachary","","Taylor"));
+potusArray.push(new President("Millard","","Fillmore"));
+potusArray.push(new President("Franklin","","Pierce"));
+potusArray.push(new President("James","","Buchanan"));
+potusArray.push(new President("Abraham","","Lincoln"));
+potusArray.push(new President("Andrew","","Johnson"));
+potusArray.push(new President("Ulysses","S.","Grant"));
+potusArray.push(new President("Rutherford","Birchard","Hayes"));
+potusArray.push(new President("James","Abram","Garfield"));
+potusArray.push(new President("Chester","Alan","Arthur"));
+potusArray.push(new President("Stephen","Grover","Cleveland"));
+potusArray.push(new President("Benjamin","","Harrison"));
+potusArray.push(new President("Stephen","Grover","Cleveland"));
+potusArray.push(new President("William","","McKinley"));
+potusArray.push(new President("Theodore","","Roosevelt"));
+potusArray.push(new President("William","Howard","Taft"));
+potusArray.push(new President("Thomas","Woodrow","Wilson"));
+potusArray.push(new President("Warren","Gamaliel","Harding"));
+potusArray.push(new President("John","Calvin","Coolidge"));
+potusArray.push(new President("Herbert","Clark","Hoover"));
+potusArray.push(new President("Franklin","Delano","Roosevelt"));
+potusArray.push(new President("Harry","S.","Truman"));
+potusArray.push(new President("Dwight","David","Eisenhower"));
+potusArray.push(new President("John","Fitzgerald","Kennedy"));
+potusArray.push(new President("Lyndon","Baines","Johnson"));
+potusArray.push(new President("Richard","Milhous","Nixon"));
+potusArray.push(new President("Gerald","Rudolph","Ford"));
+potusArray.push(new President("James","Earl","Carter"));
+potusArray.push(new President("Ronald","Wilson","Reagan"));
+potusArray.push(new President("George","Herbert Walker","Bush"));
+potusArray.push(new President("William","Jefferson","Clinton"));
+potusArray.push(new President("George","Walker","Bush"));
+potusArray.push(new President("Barack","Hussein","Obama"));
+
+
+
+/**
  * When editing your questions pay attention to your punctuation. Make sure you use question marks or periods.
  * Make sure the first answer is the correct one. Set at least 4 answers, any extras will be shuffled in.
  */
 var questions = [
     {
         "Who was the first U.S. President?": [
-            potusArray.fullName[0],
-            potusArray.fullName[1],
-            potusArray.fullName[2],
-            potusArray.fullName[3],
-            potusArray.fullName[4]
+            potusArray[0].fullName,
+            potusArray[1].fullName,
+            potusArray[2].fullName,
+            potusArray[3].fullName,
+            potusArray[4].fullName
         ]
     },
     {
         "Who was the second U.S. President?": [
-            potusArray.fullName[1],
-            potusArray.fullName[2],
-            potusArray.fullName[3],
-            potusArray.fullName[4],
-            potusArray.fullName[5]
+            potusArray[1].fullName,
+            potusArray[2].fullName,
+            potusArray[3].fullName,
+            potusArray[4].fullName,
+            potusArray[5].fullName
         ]
     },
     {
         "Who was the third U.S. President?": [
-            potusArray.fullName[2],
-            potusArray.fullName[3],
-            potusArray.fullName[4],
-            potusArray.fullName[5],
-            potusArray.fullName[1]
+            potusArray[2].fullName,
+            potusArray[3].fullName,
+            potusArray[4].fullName,
+            potusArray[5].fullName,
+            potusArray[1].fullName
         ]
     },
     {
         "Who was the fourth U.S. President?": [
-            potusArray.fullName[3],
-            potusArray.fullName[4],
-            potusArray.fullName[5],
-            potusArray.fullName[2],
-            potusArray.fullName[6]
+            potusArray[3].fullName,
+            potusArray[4].fullName,
+            potusArray[5].fullName,
+            potusArray[2].fullName,
+            potusArray[6].fullName
         ]
     },
     {
         "Who was the fifth U.S. President?": [
-            potusArray.fullName[4],
-            potusArray.fullName[5],
-            potusArray.fullName[6],
-            potusArray.fullName[7],
-            potusArray.fullName[3]
+            potusArray[4].fullName,
+            potusArray[5].fullName,
+            potusArray[6].fullName,
+            potusArray[7].fullName,
+            potusArray[3].fullName
         ]
     },
     {
         "Who was the sixth U.S. President?": [
-            potusArray.fullName[5],
-            potusArray.fullName[6],
-            potusArray.fullName[7],
-            potusArray.fullName[8],
-            potusArray.fullName[2]
+            potusArray[5].fullName,
+            potusArray[6].fullName,
+            potusArray[7].fullName,
+            potusArray[8].fullName,
+            potusArray[2].fullName
         ]
     },
     {
         "Who was the seventh U.S. President?": [
-            potusArray.fullName[5],
-            potusArray.fullName[6],
-            potusArray.fullName[7],
-            potusArray.fullName[8],
-            potusArray.fullName[2]
+            potusArray[5].fullName,
+            potusArray[6].fullName,
+            potusArray[7].fullName,
+            potusArray[8].fullName,
+            potusArray[2].fullName
         ]
     },
     {
         "Who was the eighth U.S. President?": [
-            potusArray.fullName[7],
-            potusArray.fullName[8],
-            potusArray.fullName[9],
-            potusArray.fullName[10],
-            potusArray.fullName[6]
+            potusArray[7].fullName,
+            potusArray[8].fullName,
+            potusArray[9].fullName,
+            potusArray[10].fullName,
+            potusArray[6].fullName
         ]
     },
     {
         "Who was the ninth U.S. President?": [
-            potusArray.fullName[8],
-            potusArray.fullName[9],
-            potusArray.fullName[10],
-            potusArray.fullName[11],
-            potusArray.fullName[7],
+            potusArray[8].fullName,
+            potusArray[9].fullName,
+            potusArray[10].fullName,
+            potusArray[11].fullName,
+            potusArray[7].fullName,
         ]
     },
     {
         "Who was the tenth U.S. President?": [
-            potusArray.fullName[9],
-            potusArray.fullName[10],
-            potusArray.fullName[11],
-            potusArray.fullName[12],
-            potusArray.fullName[8]
+            potusArray[9].fullName,
+            potusArray[10].fullName,
+            potusArray[11].fullName,
+            potusArray[12].fullName,
+            potusArray[8].fullName
         ]
     },
     {
         "Who was the eleventh U.S. President?": [
-            potusArray.fullName[10],
-            potusArray.fullName[11],
-            potusArray.fullName[12],
-            potusArray.fullName[13],
-            potusArray.fullName[9]
+            potusArray[10].fullName,
+            potusArray[11].fullName,
+            potusArray[12].fullName,
+            potusArray[13].fullName,
+            potusArray[9].fullName
         ]
     },
     {
         "Which U.S. President personally led an army while in office as President?": [
-            potusArray.fullName[0],
-            potusArray.fullName[4],
-            potusArray.fullName[8],
-            potusArray.fullName[13],
-            potusArray.fullName[17]
+            potusArray[0].fullName,
+            potusArray[4].fullName,
+            potusArray[8].fullName,
+            potusArray[13].fullName,
+            potusArray[17].fullName
         ]
     },
     {
         "Which U.S. President was the fattest?": [
-            potusArray.fullName[26],
-            potusArray.fullName[21],
-            potusArray.fullName[7],
-            potusArray.fullName[41],
-            potusArray.fullName[12]
+            potusArray[26].fullName,
+            potusArray[21].fullName,
+            potusArray[7].fullName,
+            potusArray[41].fullName,
+            potusArray[12].fullName
         ]
     },
     {
         "Which President did not have a blood relative also serve as President?": [
-            potusArray.fullName[7],
-            potusArray.fullName[5],
-            potusArray.fullName[22],
-            potusArray.fullName[31],
-            potusArray.fullName[42]
+            potusArray[7].fullName,
+            potusArray[5].fullName,
+            potusArray[22].fullName,
+            potusArray[31].fullName,
+            potusArray[42].fullName
         ]
     },
     {
         "Which President served the shortest time as President?": [
-            potusArray.fullName[8],
-            potusArray.fullName[11],
-            potusArray.fullName[15],
-            potusArray.fullName[24],
-            potusArray.fullName[36]
+            potusArray[8].fullName,
+            potusArray[11].fullName,
+            potusArray[15].fullName,
+            potusArray[24].fullName,
+            potusArray[36].fullName
         ]
     },
     {
         "Which President served the longest as President?": [
-            potusArray.fullName[31],
-            potusArray.fullName[0],
-            potusArray.fullName[15],
-            potusArray.fullName[1],
-            potusArray.fullName[25]
+            potusArray[31].fullName,
+            potusArray[0].fullName,
+            potusArray[15].fullName,
+            potusArray[1].fullName,
+            potusArray[25].fullName
         ]
     },
     {
         "Which President served the shortest time as President?": [
-            potusArray.fullName[10],
-            potusArray.fullName[13],
-            potusArray.fullName[15],
-            potusArray.fullName[26],
-            potusArray.fullName[30]
+            potusArray[10].fullName,
+            potusArray[13].fullName,
+            potusArray[15].fullName,
+            potusArray[26].fullName,
+            potusArray[30].fullName
         ]
     },
     {
         "Which President was the first Republican to hold the office?": [
-            potusArray.fullName[15],
-            potusArray.fullName[17],
-            potusArray.fullName[22],
-            potusArray.fullName[30],
-            potusArray.fullName[2]
+            potusArray[15].fullName,
+            potusArray[17].fullName,
+            potusArray[22].fullName,
+            potusArray[30].fullName,
+            potusArray[2].fullName
         ]
     },
     {
         "Which President was the first Democrat to hold the office?": [
-            potusArray.fullName[6],
-            potusArray.fullName[7],
-            potusArray.fullName[13],
-            potusArray.fullName[21],
-            potusArray.fullName[27]
+            potusArray[6].fullName,
+            potusArray[7].fullName,
+            potusArray[13].fullName,
+            potusArray[21].fullName,
+            potusArray[27].fullName
         ]
     },
     {
         "Which President served two non-consecutive terms?": [
-            potusArray.fullName[21],
-            potusArray.fullName[25],
-            potusArray.fullName[16],
-            potusArray.fullName[31],
-            potusArray.fullName[1]
+            potusArray[21].fullName,
+            potusArray[25].fullName,
+            potusArray[16].fullName,
+            potusArray[31].fullName,
+            potusArray[1].fullName
         ]
     },
     {
         "Which President was not a general before becoming elected as President?": [
-            potusArray.fullName[10],
-            potusArray.fullName[11],
-            potusArray.fullName[8],
-            potusArray.fullName[6],
-            potusArray.fullName[17]
+            potusArray[10].fullName,
+            potusArray[11].fullName,
+            potusArray[8].fullName,
+            potusArray[6].fullName,
+            potusArray[17].fullName
         ]
     },
     {
         "Which President was the oldest to take office?": [
-            potusArray.fullName[39],
-            potusArray.fullName[38],
-            potusArray.fullName[40],
-            potusArray.fullName[10],
-            potusArray.fullName[22]
+            potusArray[39].fullName,
+            potusArray[38].fullName,
+            potusArray[40].fullName,
+            potusArray[10].fullName,
+            potusArray[22].fullName
         ]
     },
     {
         "Which President was the youngest to take the oath of office of President?": [
-            potusArray.fullName[25],
-            potusArray.fullName[31],
-            potusArray.fullName[34],
-            potusArray.fullName[16],
-            potusArray.fullName[9]
+            potusArray[25].fullName,
+            potusArray[31].fullName,
+            potusArray[34].fullName,
+            potusArray[16].fullName,
+            potusArray[9].fullName
         ]
     },
     {
         "Which President was the youngest to be elected as President?": [
-            potusArray.fullName[34],
-            potusArray.fullName[25],
-            potusArray.fullName[22],
-            potusArray.fullName[30],
-            potusArray.fullName[43]
+            potusArray[34].fullName,
+            potusArray[25].fullName,
+            potusArray[22].fullName,
+            potusArray[30].fullName,
+            potusArray[43].fullName
         ]
     },
     {
         "Which President was not formally associated with a political party?": [
-            potusArray.fullName[0],
-            potusArray.fullName[2],
-            potusArray.fullName[1],
-            potusArray.fullName[4],
-            potusArray.fullName[6]
+            potusArray[0].fullName,
+            potusArray[2].fullName,
+            potusArray[1].fullName,
+            potusArray[4].fullName,
+            potusArray[6].fullName
         ]
     },
     {
         "Which President was the first and only President from the Federalist Party?": [
-            potusArray.fullName[1],
-            potusArray.fullName[3],
-            potusArray.fullName[7],
-            potusArray.fullName[11],
-            potusArray.fullName[13]
+            potusArray[1].fullName,
+            potusArray[3].fullName,
+            potusArray[7].fullName,
+            potusArray[11].fullName,
+            potusArray[13].fullName
         ]
     },
     {
         "Which President was not from the Whig Party?": [
-            potusArray.fullName[18],
-            potusArray.fullName[8],
-            potusArray.fullName[9],
-            potusArray.fullName[11],
-            potusArray.fullName[12]
+            potusArray[18].fullName,
+            potusArray[8].fullName,
+            potusArray[9].fullName,
+            potusArray[11].fullName,
+            potusArray[12].fullName
         ]
     },
     {
         "Which Democratic President did not declare war during their term in office?": [
-            potusArray.fullName[16],
-            potusArray.fullName[10],
-            potusArray.fullName[27],
-            potusArray.fullName[31]
+            potusArray[16].fullName,
+            potusArray[10].fullName,
+            potusArray[27].fullName,
+            potusArray[31].fullName
         ]
     },
     {
         "Which President was born in California?": [
-            potusArray.fullName[36],
-            potusArray.fullName[39],
-            potusArray.fullName[37],
-            potusArray.fullName[43]
+            potusArray[36].fullName,
+            potusArray[39].fullName,
+            potusArray[37].fullName,
+            potusArray[43].fullName
         ]
     },
     {
         "Which President did not attend Harvard?": [
-            potusArray.fullName[41],
-            potusArray.fullName[1],
-            potusArray.fullName[34],
-            potusArray.fullName[31],
-            potusArray.fullName[25],
-            potusArray.fullName[5],
-            potusArray.fullName[43],
-            potusArray.fullName[42],
-            potusArray.fullName[18]
+            potusArray[41].fullName,
+            potusArray[1].fullName,
+            potusArray[34].fullName,
+            potusArray[31].fullName,
+            potusArray[25].fullName,
+            potusArray[5].fullName,
+            potusArray[43].fullName,
+            potusArray[42].fullName,
+            potusArray[18].fullName
         ]
     },
     {
         "Which President did not attend Yale?": [
-            potusArray.fullName[29],
-            potusArray.fullName[26],
-            potusArray.fullName[42],
-            potusArray.fullName[40],
-            potusArray.fullName[41],
-            potusArray.fullName[37]
+            potusArray[29].fullName,
+            potusArray[26].fullName,
+            potusArray[42].fullName,
+            potusArray[40].fullName,
+            potusArray[41].fullName,
+            potusArray[37].fullName
         ]
     },
     {
         "Which President did not attend college or graduate school in California?": [
-            potusArray.fullName[42],
-            potusArray.fullName[36],
-            potusArray.fullName[30],
-            potusArray.fullName[39],
-            potusArray.fullName[43]
+            potusArray[42].fullName,
+            potusArray[36].fullName,
+            potusArray[30].fullName,
+            potusArray[39].fullName,
+            potusArray[43].fullName
         ]
     },
     {
         "Which President was never a slaveholder at some point in their life?": [
-            potusArray.fullName[1],
-            potusArray.fullName[0],
-            potusArray.fullName[2],
-            potusArray.fullName[3],
-            potusArray.fullName[4],
-            potusArray.fullName[6],
-            potusArray.fullName[7], 
-            potusArray.fullName[8],
-            potusArray.fullName[9],
-            potusArray.fullName[10],
-            potusArray.fullName[11],
-            potusArray.fullName[16],
-            potusArray.fullName[17]
+            potusArray[1].fullName,
+            potusArray[0].fullName,
+            potusArray[2].fullName,
+            potusArray[3].fullName,
+            potusArray[4].fullName,
+            potusArray[6].fullName,
+            potusArray[7].fullName, 
+            potusArray[8].fullName,
+            potusArray[9].fullName,
+            potusArray[10].fullName,
+            potusArray[11].fullName,
+            potusArray[16].fullName,
+            potusArray[17].fullName
         ]
     },
     {
         "Which President did not publish a book in their lifetime?": [
-            potusArray.fullName[15],  
-            potusArray.fullName[17],  
-            potusArray.fullName[2],  
-            potusArray.fullName[33],
-            potusArray.fullName[34], 
-            potusArray.fullName[36],
-            potusArray.fullName[38],
-            potusArray.fullName[39],
-            potusArray.fullName[40],
-            potusArray.fullName[41],
-            potusArray.fullName[42],
-            potusArray.fullName[43]
+            potusArray[15].fullName,  
+            potusArray[17].fullName,  
+            potusArray[2].fullName,  
+            potusArray[33].fullName,
+            potusArray[34].fullName, 
+            potusArray[36].fullName,
+            potusArray[38].fullName,
+            potusArray[39].fullName,
+            potusArray[40].fullName,
+            potusArray[41].fullName,
+            potusArray[42].fullName,
+            potusArray[43].fullName
         ]
     },
     {
         "Which President did not attend school in California?": [
-            potusArray.fullName[42],
-            potusArray.fullName[36],
-            potusArray.fullName[30],
-            potusArray.fullName[39],
-            potusArray.fullName[43]
+            potusArray[42].fullName,
+            potusArray[36].fullName,
+            potusArray[30].fullName,
+            potusArray[39].fullName,
+            potusArray[43].fullName
         ]
     },
     {
         "Which President was the tallest?": [
-            potusArray.fullName[15],
-            potusArray.fullName[3],
-            potusArray.fullName[4],
-            potusArray.fullName[0],
-            potusArray.fullName[39]
+            potusArray[15].fullName,
+            potusArray[3].fullName,
+            potusArray[4].fullName,
+            potusArray[0].fullName,
+            potusArray[39].fullName
         ]
     },
     {
         "Which President was the shortest?": [
-            potusArray.fullName[3],
-            potusArray.fullName[12],
-            potusArray.fullName[4],
-            potusArray.fullName[2],
-            potusArray.fullName[26]
+            potusArray[3].fullName,
+            potusArray[12].fullName,
+            potusArray[4].fullName,
+            potusArray[2].fullName,
+            potusArray[26].fullName
         ]
     },
     {
         "Which President is not thought to have been an alcoholic?": [
-            potusArray.fullName[32],
-            potusArray.fullName[7],
-            potusArray.fullName[14],
-            potusArray.fullName[16],
-            potusArray.fullName[17],
-            potusArray.fullName[20],
-            potusArray.fullName[29],
-            potusArray.fullName[42]
+            potusArray[32].fullName,
+            potusArray[7].fullName,
+            potusArray[14].fullName,
+            potusArray[16].fullName,
+            potusArray[17].fullName,
+            potusArray[20].fullName,
+            potusArray[29].fullName,
+            potusArray[42].fullName
         ]
     },
     {
         "Which President was first to view the Pacific Ocean?": [
-            potusArray.fullName[17],
-            potusArray.fullName[15],
-            potusArray.fullName[11],
-            potusArray.fullName[19],
-            potusArray.fullName[25]
+            potusArray[17].fullName,
+            potusArray[15].fullName,
+            potusArray[11].fullName,
+            potusArray[19].fullName,
+            potusArray[25].fullName
         ]
     }, 
     {
         "Which President was first to live in the White House?": [
-            potusArray.fullName[0],
-            potusArray.fullName[1],
-            potusArray.fullName[2],
-            potusArray.fullName[3],
-            potusArray.fullName[4],
-            potusArray.fullName[5]
+            potusArray[0].fullName,
+            potusArray[1].fullName,
+            potusArray[2].fullName,
+            potusArray[3].fullName,
+            potusArray[4].fullName,
+            potusArray[5].fullName
         ]
     }, 
     {
         "Which President was first to be elected as a bachelor?": [
-            potusArray.fullName[14],
-            potusArray.fullName[19],
-            potusArray.fullName[24],
-            potusArray.fullName[29],
-            potusArray.fullName[9]
+            potusArray[14].fullName,
+            potusArray[19].fullName,
+            potusArray[24].fullName,
+            potusArray[29].fullName,
+            potusArray[9].fullName
         ]
     },
     {
         "Which President was first to have been divorced before taking office?": [
-            potusArray.fullName[39],
-            potusArray.fullName[38],
-            potusArray.fullName[37],
-            potusArray.fullName[41],
-            potusArray.fullName[20]
+            potusArray[39].fullName,
+            potusArray[38].fullName,
+            potusArray[37].fullName,
+            potusArray[41].fullName,
+            potusArray[20].fullName
         ]
     }, 
     {
         "Which President was first to throw out the first pitch at a baseball game?": [
-            potusArray.fullName[26],
-            potusArray.fullName[21],
-            potusArray.fullName[22],
-            potusArray.fullName[23],
-            potusArray.fullName[25]
+            potusArray[26].fullName,
+            potusArray[21].fullName,
+            potusArray[22].fullName,
+            potusArray[23].fullName,
+            potusArray[25].fullName
         ]
     }, 
     {
         "Which President was first to receive a Nobel Prize?": [
-            potusArray.fullName[25],
-            potusArray.fullName[43],
-            potusArray.fullName[42],
-            potusArray.fullName[38],
-            potusArray.fullName[33]
+            potusArray[25].fullName,
+            potusArray[43].fullName,
+            potusArray[42].fullName,
+            potusArray[38].fullName,
+            potusArray[33].fullName
         ]
     }, 
     {
         "Which President was first to have a car at the White House?": [
-            potusArray.fullName[26],
-            potusArray.fullName[25],
-            potusArray.fullName[24],
-            potusArray.fullName[27],
-            potusArray.fullName[28]
+            potusArray[26].fullName,
+            potusArray[25].fullName,
+            potusArray[24].fullName,
+            potusArray[27].fullName,
+            potusArray[28].fullName
         ]
     }, 
     {
         "Which President was first to have been born in a hospital?": [
-            potusArray.fullName[38],
-            potusArray.fullName[36],
-            potusArray.fullName[37],
-            potusArray.fullName[34],
-            potusArray.fullName[40]
+            potusArray[38].fullName,
+            potusArray[36].fullName,
+            potusArray[37].fullName,
+            potusArray[34].fullName,
+            potusArray[40].fullName
         ]
     }, 
 ];
@@ -579,11 +639,11 @@ function onSessionEnded(sessionEndedRequest, session) {
 
 var ANSWER_COUNT = 4;
 var GAME_LENGTH = 5;
-var CARD_TITLE = "Reindeer Games"; // Be sure to change this for your skill.
+var CARD_TITLE = "United States of America Presidential Trivia"; // Be sure to change this for your skill.
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
-        speechOutput = "Reindeer Games. I will ask you " + GAME_LENGTH.toString()
+        speechOutput = "Presidential trivia. I will ask you " + GAME_LENGTH.toString()
             + " questions, try to get as many right as you can. Just say the number of the answer. Let's begin. ",
         shouldEndSession = false,
 
@@ -843,4 +903,3 @@ function buildResponse(sessionAttributes, speechletResponse) {
         response: speechletResponse
     };
 }
-
